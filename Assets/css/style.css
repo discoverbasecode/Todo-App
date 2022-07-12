@@ -4,6 +4,138 @@
     url('/Assets/Css/font/iranSansWeb/IRANSansWeb.woff') format('woff'),
     url('/Assets/Css/font/iranSansWeb/IRANSansWeb.ttf') format('ttf');
 }
-* {
-  font-family: IRANSANS;
+
+body {
+  direction: rtl;
+}
+:root {
+  /** Varaible Colore style  */
+  --granite-gray: hsl(210, 1%, 37%);
+  --errie-black: hsl(240, 2%, 11%);
+  --slimy-green: hsl(91, 100%, 30%);
+  --fuzzy-wuzzy: hsl(0, 42%, 57%);
+  --davys-gray: hsl(220, 2%, 28%);
+  --cultured-1: hsl(228, 17%, 94%);
+  --cultured-2: hsl(0, 0%, 96%);
+  --dim-gray: hsl(240, 1%, 41%);
+  --white-80: hsl(0, 0%, 100%, 0.8);
+  --white-70: hsl(0, 0%, 100%, 0.7);
+  --white-40: hsl(0, 0%, 100%, 0.4);
+  --white-10: hsl(0, 0%, 100%, 0.1);
+  --black-05: hsl(0, 0%, 0%, 0.05);
+  --black-50: hsl(0, 0%, 0%, 0.5);
+  --black-25: hsl(0, 0%, 0%, 0.25);
+  --white-2: hsl(0, 0%, 98%);
+  --white-1: hsl(0, 0%, 100%);
+  --black: hsla(0, 0%, 0%);
+
+  /** Varaible Theme Colore style  */
+  --hue: 227;
+  --theme-bg: linear-gradient(
+    to bottom,
+    hsl(var(--hu, 227), 40%, 50%),
+    hsl(var(--hu, 227), 40%, 60%)
+  );
+  --theme-color: hsl(var(--hu, 227), 42%, 57%);
+
+  /** Varaible TypoGraphy Colore style  */
+  --ff-iransans: IRANSANS;
+  --fs-1: 2.6rem;
+  --fs-2: 2.2rem;
+  --fs-3: 1.8rem;
+  --fs-4: 1.4rem;
+  --fs-5: 1.2rem;
+  --fw-500: 500;
+
+  /** Varaible Radius  style  */
+  --radius-4: 4px;
+  --radius-5: 5px;
+  --radius-10: 10px;
+
+  /** Varaible Shadows Colore style  */
+  --shadow-1: 0 0 5px hsla(0, 0%, 0%, 0.05);
+  --shadow-2: 0 0 10px hsla(0, 0%, 0%, 0.05);
+
+  /** Varaible transition animations style  */
+  --transition: 0.15s ease;
+  --cubix-out: cubic-bezier(0.05, 0.65, 0.25, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+img,
+span,
+input,
+label,
+button,
+strong,
+ion-icon {
+  display: block;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+input {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+}
+strong {
+  font-weight: normal;
+}
+ion-icon {
+  pointer-events: none;
+}
+html {
+  font-family: var(--ff-iransans);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: var(--theme-bg);
+  color: var(--errie-black);
+  font-size: 1.6rem;
+  min-height: 100vh;
+  padding-block: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+body.loaded {
+  opacity: 1;
+}
+
+:focus-visible {
+  outline-offset: 4px;
+}
+
+:focus-visible:active {
+  outline-offset: 2px;
 }
