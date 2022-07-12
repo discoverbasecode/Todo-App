@@ -1,0 +1,9 @@
+@font-face {
+  font-family: iransans;
+  src: url('/Assets/Css/font/iranSansWeb/IRANSansWeb.woff2') format('woff2'),
+    url('/Assets/Css/font/iranSansWeb/IRANSansWeb.woff') format('woff'),
+    url('/Assets/Css/font/iranSansWeb/IRANSansWeb.ttf') format('ttf');
+}
+* {
+  font-family: IRANSANS;
+}
